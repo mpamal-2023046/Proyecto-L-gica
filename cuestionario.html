@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario - Proyecto de Lógica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quiz-container { max-width: 850px; margin: auto; text-align: left; padding: 20px; }
+        .question-block { 
+            margin-bottom: 20px; 
+            padding: 20px; 
+            border: 1px solid #eee; 
+            border-radius: 10px; 
+            background: white;
+        }
+        .options-list { list-style: none; padding: 0; margin-top: 10px; }
+        .options-list li { margin-bottom: 8px; }
+        .question-text { font-size: 1.1em; color: #2c3e50; font-weight: bold; }
+        
+        .correct-answer { border: 2px solid #27ae60 !important; background-color: #d4edda !important; }
+        .wrong-answer { border: 2px solid #e74c3c !important; background-color: #f8d7da !important; }
+        
+        .feedback-label { 
+            display: none; 
+            margin-top: 10px; 
+            font-weight: bold; 
+            color: #155724; 
+        }
+        
+        textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px; }
+        .section-title { color: #c0392b; border-bottom: 2px solid #c0392b; margin: 40px 0 20px; }
+        
+        .btn-grade { 
+            background-color: #27ae60; color: white; padding: 20px; 
+            border: none; border-radius: 8px; cursor: pointer; font-size: 18px; 
+            font-weight: bold; width: 100%; margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Escudo_de_la_universidad_Mariano_G%C3%A1lvez_Guatemala.svg/960px-Escudo_de_la_universidad_Mariano_G%C3%A1lvez_Guatemala.svg.png" alt="Logo UMG">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="resumen.html">Resumen</a></li>
+            <li><a href="presentacion.html">Presentación</a></li>
+            <li><a href="cuestionario.html">Cuestionario</a></li>
+            <li><a href="videos.html">Videos</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <section class="content-page quiz-container">
+            <h2>Cuestionario sobre “Innovación e Inteligencia”</h2>
+
+            <form id="quizForm">
+                <h3 class="section-title">Parte I. Opción Múltiple</h3>
+
+                <div class="question-block" id="q1">
+                    <p class="question-text">1. ¿Qué es la innovación según la información proporcionada?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p1" value="0"> A) Copiar ideas de otras empresas</li>
+                        <li><input type="radio" name="p1" value="1"> B) Crear o aplicar cambios significativos para generar valor</li>
+                        <li><input type="radio" name="p1" value="0"> C) Resolver únicamente problemas matemáticos</li>
+                        <li><input type="radio" name="p1" value="0"> D) Utilizar siempre tecnología moderna</li>
+                        <li><input type="radio" name="p1" value="0"> E) Trabajar individualmente</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta: B</p>
+                </div>
+
+                <div class="question-block" id="q2">
+                    <p class="question-text">2. ¿Propósito principal de la innovación?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p2" value="0"> A) Reducir el trabajo humano</li>
+                        <li><input type="radio" name="p2" value="0"> B) Aumentar únicamente las ganancias</li>
+                        <li><input type="radio" name="p2" value="1"> C) Mejorar resultados y generar valor</li>
+                        <li><input type="radio" name="p2" value="0"> D) Crear productos costosos</li>
+                        <li><input type="radio" name="p2" value="0"> E) Eliminar la competencia</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta: C</p>
+                </div>
+
+                <div class="question-block" id="q3">
+                    <p class="question-text">3. ¿Cómo define el texto la inteligencia?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p3" value="0"> A) La habilidad de memorizar información</li>
+                        <li><input type="radio" name="p3" value="1"> B) La capacidad de comprender, razonar y resolver problemas</li>
+                        <li><input type="radio" name="p3" value="0"> C) La capacidad de crear máquinas</li>
+                        <li><input type="radio" name="p3" value="0"> D) El talento artístico únicamente</li>
+                        <li><input type="radio" name="p3" value="0"> E) La rapidez para hablar</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta: B</p>
+                </div>
+
+                <div class="question-block" id="q4">
+                    <p class="question-text">4. ¿Por qué una persona inteligente no siempre es innovadora según su criterio?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p4" value="1"> A) Porque requiere creatividad, iniciativa y acción</li>
+                        <li><input type="radio" name="p4" value="0"> B) Porque necesita dinero</li>
+                        <li><input type="radio" name="p4" value="0"> C) Porque no tiene estudios</li>
+                        <li><input type="radio" name="p4" value="0"> D) Porque depende de otras personas</li>
+                        <li><input type="radio" name="p4" value="0"> E) Porque la innovación no necesita inteligencia</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta: A</p>
+                </div>
+
+                <div class="question-block" id="q5">
+                    <p class="question-text">5. ¿Cuál de las siguientes opciones cuál cree que es un tipo de innovación?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p5" value="0"> A) Innovación artística</li>
+                        <li><input type="radio" name="p5" value="0"> B) Innovación matemática</li>
+                        <li><input type="radio" name="p5" value="1"> C) Innovación organizacional</li>
+                        <li><input type="radio" name="p5" value="0"> D) Innovación deportiva</li>
+                        <li><input type="radio" name="p5" value="0"> E) Innovación política</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta: C</p>
+                </div>
+
+<div class="question-block" id="q6">
+                    <p class="question-text">6. ¿Qué ocurre en la innovación en procesos?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p6" value="0"> A) Se modifican las leyes</li>
+                        <li><input type="radio" name="p6" value="0"> B) Se crean nuevas redes sociales</li>
+                        <li><input type="radio" name="p6" value="1"> C) Se mejoran métodos de producción o distribución</li>
+                        <li><input type="radio" name="p6" value="0"> D) Se diseñan videojuegos</li>
+                        <li><input type="radio" name="p6" value="0"> E) Se cambia la decoración de oficinas</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta correcta: C</p>
+                </div>
+
+                <div class="question-block" id="q7">
+                    <p class="question-text">7. ¿Quién propuso la teoría de las inteligencias múltiples?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p7" value="0"> A) Albert Einstein</li>
+                        <li><input type="radio" name="p7" value="0"> B) Andrés Oppenheimer</li>
+                        <li><input type="radio" name="p7" value="1"> C) Howard Gardner</li>
+                        <li><input type="radio" name="p7" value="0"> D) Steve Jobs</li>
+                        <li><input type="radio" name="p7" value="0"> E) Bill Gates</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta correcta: C</p>
+                </div>
+
+                <div class="question-block" id="q8">
+                    <p class="question-text">8. ¿Cuál de las siguientes inteligencias menciona el texto?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p8" value="0"> A) Inteligencia emocional digital</li>
+                        <li><input type="radio" name="p8" value="1"> B) Inteligencia lógico-matemática</li>
+                        <li><input type="radio" name="p8" value="0"> C) Inteligencia mecánica</li>
+                        <li><input type="radio" name="p8" value="0"> D) Inteligencia política</li>
+                        <li><input type="radio" name="p8" value="0"> E) Inteligencia financiera</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta correcta: B</p>
+                </div>
+
+                <div class="question-block" id="q9">
+                    <p class="question-text">9. ¿Qué ejemplo mundial de innovación menciona el texto?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p9" value="0"> A) Nueva York</li>
+                        <li><input type="radio" name="p9" value="1"> B) Silicon Valley</li>
+                        <li><input type="radio" name="p9" value="0"> C) Tokio</li>
+                        <li><input type="radio" name="p9" value="0"> D) París</li>
+                        <li><input type="radio" name="p9" value="0"> E) Londres</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta correcta: B</p>
+                </div>
+
+                <div class="question-block" id="q10">
+                    <p class="question-text">10. ¿Qué debe equilibrar una oportunidad real?</p>
+                    <ul class="options-list">
+                        <li><input type="radio" name="p10" value="0"> A) Tiempo y dinero</li>
+                        <li><input type="radio" name="p10" value="0"> B) Experiencia y trabajo</li>
+                        <li><input type="radio" name="p10" value="1"> C) Esfuerzo, riesgo y recompensa</li>
+                        <li><input type="radio" name="p10" value="0"> D) Creatividad y tecnología</li>
+                        <li><input type="radio" name="p10" value="0"> E) Empresa y sociedad</li>
+                    </ul>
+                    <p class="feedback-label">Respuesta correcta: C</p>
+                </div>
+
+                <h3 class="section-title">Parte II. Preguntas Abiertas</h3>
+
+                <div class="question-block" id="q11">
+                    <p class="question-text">11. ¿Por qué la innovación es importante en la ingeniería?</p>
+                    <textarea rows="2" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <div class="question-block" id="q12">
+                    <p class="question-text">12. Explica la diferencia entre inteligencia e innovación.</p>
+                    <textarea rows="2" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <div class="question-block" id="q13">
+                    <p class="question-text">13. ¿Por qué la teoría de las inteligencias múltiples es importante?</p>
+                    <textarea rows="2" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <div class="question-block" id="q14">
+                    <p class="question-text">14. ¿Qué características hacen exitoso a Silicon Valley?</p>
+                    <textarea rows="2" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <div class="question-block" id="q15">
+                    <p class="question-text">15. ¿Cuáles son algunas claves para innovar en los países según Andrés Oppenheimer?</p>
+                    <textarea rows="2" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <button type="button" onclick="validarFormulario()" class="btn-grade">CALIFICAR CUESTIONARIO</button>
+            </form>
+
+            <div id="punteo" style="text-align: center; font-size: 24px; font-weight: bold; padding: 20px;"></div>
+
+    <script>
+        function validarFormulario() {
+            let nota = 0;
+            
+            // 1. Calificar Selección Múltiple (1 al 10)
+            for (let i = 1; i <= 10; i++) {
+                let rbs = document.getElementsByName('p' + i);
+                let contestadaCorrecta = false;
+                let bloque = document.getElementById('q' + i);
+                
+                for (let rb of rbs) {
+                    if (rb.checked && rb.value === "1") {
+                        contestadaCorrecta = true;
+                        break;
+                    }
+                }
+
+                if (contestadaCorrecta) {
+                    bloque.classList.add('correct-answer');
+                    bloque.classList.remove('wrong-answer');
+                    nota++;
+                } else {
+                    bloque.classList.add('wrong-answer');
+                    bloque.classList.remove('correct-answer');
+                }
+                bloque.querySelector('.feedback-label').style.display = 'block';
+            }
+
+            // 2. Calificar Abiertas (11 al 15) - Se marcan automáticas
+            for (let j = 11; j <= 15; j++) {
+                let bloqueAbierto = document.getElementById('q' + j);
+                bloqueAbierto.classList.add('correct-answer');
+                nota++; 
+            }
+
+            document.getElementById('punteo').innerHTML = "Nota Final: " + nota + " / 15";
+            alert("Calificación completada. ¡Revisa tus resultados!");
+        }
+    </script>
+</body>
+</html>
